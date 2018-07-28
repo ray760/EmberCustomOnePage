@@ -141,3 +141,76 @@ p {
   }
 
 }
+
+.digital-ocean {
+
+  a.repo {
+    color: $text;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $blueShade;
+    }
+  }
+
+  h1 {
+    color: $blueShade;
+  }
+
+  padding-bottom: 2rem;
+
+  .social-icons {
+    margin-top: 3rem;
+  }
+
+  .fa {
+    bottom: 0;
+    color: $text;
+    font-size: 3em;
+    margin: 0 0.938rem;
+    position: relative;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      bottom: .750rem;
+    }
+  }
+
+  .fa-github-square:hover {
+    color: #000;
+  }
+
+  .fa-linkedin-square:hover {
+    color: #0077B5;
+  }
+
+  .fa-file-word-o:hover {
+    color: #1565c0;
+  }
+
+  .fa-envelope-square:hover {
+    color: $blueShade;
+  }
+
+}
+
+.responsive-ytv {
+  display: block;
+  height: 0;
+  margin: 20px;
+  overflow: hidden;
+  padding-bottom: 55.56%;
+  position: relative;
+}
+
+#ytplayer {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
