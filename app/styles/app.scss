@@ -1,0 +1,143 @@
+@import 'fonts';
+@import 'vendors';
+
+$bg: rgb(255,255,255);
+$text: rgb(51, 51, 51);
+$blueShade: rgb(0, 105, 255);
+
+body {
+  background-color: $bg;
+  color: $text;
+  font-family: Poppins;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+h6 {
+  font-weight: 700;
+  margin-top: 1.5em;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.aStyle {
+  background:none!important;
+  border:none!important;
+  color: $text;
+  display: inline-block;
+  font-weight: 700;
+  outline: none;
+  padding:0!important;
+  position: relative;
+  text-decoration: none;
+  vertical-align: bottom;
+  white-space: nowrap;
+
+  &:hover {
+    color: $blueShade;
+  }          
+}
+
+.site-section {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 5rem;
+}
+
+.top-section {
+  background-color: $bg;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+
+  .heavy {
+    color: $blueShade;
+  }
+
+  p {
+    font-size: 1.25rem;
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+}
+
+.about {
+
+  position: relative;
+  z-index: 1; /* needed for setting pseudo-element z-index */
+  backface-visibility: hidden;
+
+  h1 {
+    color: $blueShade;
+  }
+
+  padding-top: 2rem;
+
+  a {
+    color: $text;
+    display: inline-block;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    vertical-align: bottom;
+    white-space: nowrap;
+  }
+
+  a::before,
+  a::after {
+    backface-visibility: hidden;
+    pointer-events: none;
+  }
+
+  a {
+    padding: 0 0.25em;
+    font-weight: 700;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: $blueShade;
+  }
+
+  a::before,
+  a::after {
+    position: absolute;
+    top: 0;
+    font-weight: 100;
+    font-size: 150%;
+    line-height: 1;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  a::before {
+    left: -0.1em;
+    content: '[';
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  a::after {
+    right: -0.1em;
+    content: ']';
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  a:hover::before,
+  a:hover::after {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+}
