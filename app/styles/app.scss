@@ -11,12 +11,17 @@ body {
   font-family: Poppins;
 }
 
-h1 {
+h1,h2 {
+  .standard {
+    color: $text;
+  }
+  color: $blueShade;
   font-weight: 700;
   font-size: 3rem;
 }
 
-h6 {
+h3 {
+  font-size: 1rem;
   font-weight: 700;
   margin-top: 1.5em;
   text-transform: uppercase;
@@ -56,10 +61,6 @@ p {
   margin-top: 1rem;
   padding-bottom: 2rem;
 
-  .heavy {
-    color: $blueShade;
-  }
-
   p {
     font-size: 1.25rem;
     padding-left: 0;
@@ -72,10 +73,6 @@ p {
   position: relative;
   z-index: 1; /* needed for setting pseudo-element z-index */
   backface-visibility: hidden;
-
-  h1 {
-    color: $blueShade;
-  }
 
   padding-top: 2rem;
 
@@ -155,10 +152,6 @@ p {
     &:hover {
       color: $blueShade;
     }
-  }
-
-  h1 {
-    color: $blueShade;
   }
 
   padding-bottom: 2rem;

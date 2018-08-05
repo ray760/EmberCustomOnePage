@@ -3,23 +3,24 @@
     {{vidId}}
     {{yt-ad-videos ytVid=videoId}}
   {{/bs-modal-simple}}
-  
-  <section class="top-section site-section">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        <h1>
-          Hi, I'm <span class="heavy">Ray Robertson</span>
-        </h1>
+  <main>
+    <section class="top-section site-section">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <h1>
+            Hi, I'm <span class="standard">Ray Robertson</span>
+          </h1>
 
-        <p class="col-sm-6 col-md-12">
-        If you're here right now then more than likely you're an Digital Ocean employee, and that's awesome because I'd like to be one too. So here's my simple pitch!
-        </p>
+          <p class="col-sm-6 col-md-12">
+          If you're here right now then more than likely you're an Digital Ocean employee, and that's awesome because I'd like to be one too. So here's my simple pitch!
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  {{about-me onOpen=(action (mut modal1) true) onVidOpen=(action 'showVideo' vid=vid)}}
-  {{about-you}}
+    {{about-me onOpen=(action (mut modal1) true) onVidOpen=(action 'showVideo' vid=vid)}}
+    {{about-you}}
+  </main>
 
 </div>
 {{outlet}}
